@@ -61,3 +61,59 @@
 1. KV 绑定名必须是 `NAV_KV`
 2. 图片上传限制 5MB
 3. 国内线路按钮需要先在后台填写链接才会显示
+
+# 旭儿导航 · EdgeOne Pages 完整版
+
+基于腾讯云 EdgeOne Pages 构建的全栈个人网站，支持书签导航和博客管理。所有数据存储在 EdgeOne KV 中，无需数据库，零冷启动。
+
+## 📁 文件结构及作用
+
+📁 .edgeone/
+   └── functions.json               # 1
+
+📁 functions/
+   ├── [[catchall]].js              # 2
+   ├── _middleware.js               # 3
+   ├── admin.js                     # 4
+   ├── index.js                     # 5
+   ├── logout.js                    # 6
+   │
+   ├── 📁 post/
+   │   └── [[slug]].js              # 7
+   │
+   └── 📁 api/
+       ├── blog.js                  # 8
+       ├── change-password.js       # 9
+       ├── config.js                # 10
+       ├── header-bg.js             # 11
+       ├── logo.js                  # 12
+       ├── logo-link.js             # 13
+       ├── search.js                # 14
+       ├── site-info.js             # 15
+       ├── sitemap.js               # 16
+       ├── stats.js                 # 17
+       ├── upload.js                # 18
+       │
+       ├── 📁 blog/
+       │   └── [[id]].js            # 19
+       │
+       ├── 📁 config/
+       │   └── [id].js              # 20
+       │
+       └── 📁 image/
+           └── [filename].js        # 21
+
+📄 _routes.json                     # 22
+📄 README.md                        # 23
+
+总数：23 个文件
+目录	文件数
+.edgeone/	1
+functions/ 根目录	5
+functions/post/	1
+functions/api/ 根目录	11
+functions/api/blog/	1
+functions/api/config/	1
+functions/api/image/	1
+根目录配置文件	2
+合计	23
